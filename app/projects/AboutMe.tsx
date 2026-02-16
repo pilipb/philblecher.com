@@ -11,7 +11,7 @@ export default function AboutMe() {
           {/* Profile Image */}
           <div className="relative aspect-square bg-muted/50 rounded-lg overflow-hidden shadow-2xl">
             <Image
-              src="/me/profile.JPG"
+              src="/me/profile.png"
               alt="Phil Blecher"
               fill
               className="object-cover"
