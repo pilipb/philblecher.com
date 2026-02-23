@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Github, Linkedin } from "lucide-react";
 import { useParallax } from "../hooks/useParallax";
+import BouncingText from "../components/BouncingText";
 
 export default function AboutMe() {
   const imageParallax = useParallax({ speed: 0.2 });
@@ -35,28 +36,32 @@ export default function AboutMe() {
           >
             <div className="inline-block">
               <span className="text-sm font-mono text-foreground">
-                About
+                <BouncingText>About</BouncingText>
               </span>
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight">
-              Phil Blecher
+              <BouncingText>Phil Blecher</BouncingText>
             </h2>
             <p className="text-lg md:text-xl lg:text-2xl text-foreground leading-relaxed">
-              Product and Developer passionate about building meaningful digital experiences.
+              <BouncingText>Product and Developer passionate about building meaningful digital experiences.</BouncingText>
             </p>
             <div className="pt-2 md:pt-4">
               <div className="w-24 h-1 bg-foreground mx-auto md:mx-0"></div>
             </div>
             <div className="space-y-3 md:space-y-4 text-base md:text-lg text-foreground pt-4 md:pt-8">
               <p>
-                I'm a product builder and developer who loves creating things that matter. 
-                I work at the intersection of design, technology, and user experience, 
-                bringing ideas to life through thoughtful development and product thinking.
+                <BouncingText>
+                  I'm a product builder and developer who loves creating things that matter. 
+                  I work at the intersection of design, technology, and user experience, 
+                  bringing ideas to life through thoughtful development and product thinking.
+                </BouncingText>
               </p>
               <p>
-                Whether it's building community-driven apps, exploring AI-powered tools, 
-                or crafting digital experiences, I'm driven by curiosity and the desire 
-                to solve real problems.
+                <BouncingText>
+                  Whether it's building community-driven apps, exploring AI-powered tools, 
+                  or crafting digital experiences, I'm driven by curiosity and the desire 
+                  to solve real problems.
+                </BouncingText>
               </p>
             </div>
             <div className="pt-6 flex flex-wrap gap-4 justify-center md:justify-start">
@@ -67,7 +72,7 @@ export default function AboutMe() {
                 className="flex items-center gap-2 text-foreground hover:underline"
               >
                 <Github className="w-5 h-5" />
-                <span>GitHub</span>
+                <span><BouncingText>GitHub</BouncingText></span>
               </a>
               <a
                 href="https://www.linkedin.com/in/phil-blecher-a653251a8/"
@@ -76,7 +81,7 @@ export default function AboutMe() {
                 className="flex items-center gap-2 text-foreground hover:underline"
               >
                 <Linkedin className="w-5 h-5" />
-                <span>LinkedIn</span>
+                <span><BouncingText>LinkedIn</BouncingText></span>
               </a>
             </div>
           </div>

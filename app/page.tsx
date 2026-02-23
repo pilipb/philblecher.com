@@ -8,6 +8,7 @@ import TwoSides from "./projects/TwoSides";
 import OneShot from "./projects/OneShot";
 import AboutMe from "./projects/AboutMe";
 import { useParallax } from "./hooks/useParallax";
+import BouncingText from "./components/BouncingText";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState(0);
@@ -62,7 +63,9 @@ export default function Home() {
                 className="group flex items-center gap-2 text-muted-foreground hover:text-foreground transition-all duration-300 bg-background/80 backdrop-blur-sm px-4 py-2 rounded-full border border-border hover:border-foreground/20"
               >
                 <Github className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
-                <span className="text-sm font-medium">GitHub</span>
+                <span className="text-sm font-medium">
+                  <BouncingText>GitHub</BouncingText>
+                </span>
               </a>
               <a
                 href="https://www.linkedin.com/in/phil-blecher-a653251a8/"
@@ -71,7 +74,9 @@ export default function Home() {
                 className="group flex items-center gap-2 text-muted-foreground hover:text-foreground transition-all duration-300 bg-background/80 backdrop-blur-sm px-4 py-2 rounded-full border border-border hover:border-foreground/20"
               >
                 <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
-                <span className="text-sm font-medium">LinkedIn</span>
+                <span className="text-sm font-medium">
+                  <BouncingText>LinkedIn</BouncingText>
+                </span>
               </a>
             </nav>
           </div>
@@ -86,16 +91,18 @@ export default function Home() {
           style={heroParallax.style}
         >
           <h1 className="text-6xl md:text-8xl font-bold tracking-tight animate-fade-in">
-            Phil Blecher
+            <BouncingText>Phil Blecher</BouncingText>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground animate-fade-in-delay">
-            Product and Developer
+            <BouncingText>Product and Developer</BouncingText>
           </p>
           <div className="pt-8 animate-fade-in-delay-2">
             <div className="w-12 h-1 bg-foreground mx-auto"></div>
           </div>
           <div className="pt-12 animate-fade-in-delay-2">
-            <p className="text-sm text-muted-foreground">Scroll to explore</p>
+            <p className="text-sm text-muted-foreground">
+              <BouncingText>Scroll to explore</BouncingText>
+            </p>
             <div className="mt-4 animate-bounce">
               <svg
                 className="w-6 h-6 mx-auto"

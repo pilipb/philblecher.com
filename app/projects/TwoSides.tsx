@@ -4,6 +4,7 @@ import Image from "next/image";
 import { projects } from "./data";
 import FlippableCard from "./FlippableCard";
 import { useParallax } from "../hooks/useParallax";
+import BouncingText from "../components/BouncingText";
 
 export default function TwoSides() {
   const project = projects.find(p => p.id === 2)!;
@@ -14,7 +15,7 @@ export default function TwoSides() {
     <div className="space-y-6 text-center md:text-left bg-background/95 rounded-lg p-8 backdrop-blur-sm shadow-2xl">
       <div className="inline-block">
         <span className="text-sm font-mono text-muted-foreground">
-          Project 02
+          <BouncingText>Project 02</BouncingText>
         </span>
       </div>
       <div className="flex flex-col md:flex-row md:items-center md:gap-6">
@@ -29,7 +30,7 @@ export default function TwoSides() {
               onClick={(e) => e.stopPropagation()}
             >
               <h2 className="text-5xl md:text-7xl font-bold tracking-tight">
-                {project.title}
+                <BouncingText>{project.title}</BouncingText>
               </h2>
             </a>
             <div className="flex justify-center md:justify-start mt-4 md:mt-0">
@@ -44,7 +45,7 @@ export default function TwoSides() {
         ) : (
           <>
             <h2 className="text-5xl md:text-7xl font-bold tracking-tight">
-              {project.title}
+              <BouncingText>{project.title}</BouncingText>
             </h2>
             <div className="flex justify-center md:justify-start mt-4 md:mt-0">
               <a
@@ -66,11 +67,11 @@ export default function TwoSides() {
         )}
       </div>
       <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-        {project.description}
+        <BouncingText>{project.description}</BouncingText>
       </p>
       {project.nb && (
         <p className="text-sm text-muted-foreground">
-          {project.nb}
+          <BouncingText>{project.nb}</BouncingText>
         </p>
       )}
       <div className="pt-4">
@@ -83,13 +84,13 @@ export default function TwoSides() {
     <div className="w-full h-full space-y-6 text-center md:text-left bg-white rounded-lg p-8 shadow-2xl flex flex-col justify-center">
       <div className="inline-block">
         <span className="text-sm font-mono text-muted-foreground">
-          Project 02 - Details
+          <BouncingText>Project 02 - Details</BouncingText>
         </span>
       </div>
       <div className="space-y-4 text-lg text-muted-foreground">
         {project.backcontent && (
           <p className="pt-2">
-            {project.backcontent}
+            <BouncingText>{project.backcontent}</BouncingText>
           </p>
         )}
       </div>
@@ -97,7 +98,7 @@ export default function TwoSides() {
         <div className="w-24 h-1 bg-foreground"></div>
       </div>
       <p className="text-sm text-muted-foreground italic">
-        Click the corner to flip back
+        <BouncingText>Click the corner to flip back</BouncingText>
       </p>
     </div>
   );
