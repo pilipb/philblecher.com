@@ -2,14 +2,22 @@
 
 import Image from "next/image";
 import { Github, Linkedin } from "lucide-react";
+import { useParallax } from "../hooks/useParallax";
 
 export default function AboutMe() {
+  const imageParallax = useParallax({ speed: 0.2 });
+  const contentParallax = useParallax({ speed: -0.1 });
+  
   return (
     <section className="scroll-section flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-pink-500/20 to-rose-500/20">
       <div className="container mx-auto px-4 py-8 md:py-0">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-          {/* Profile Image */}
-          <div className="relative aspect-square w-full max-w-sm mx-auto md:max-w-none bg-muted/50 rounded-lg overflow-hidden shadow-2xl">
+          {/* Profile Image with Parallax */}
+          <div 
+            ref={imageParallax.ref as React.RefObject<HTMLDivElement>}
+            className="relative aspect-square w-full max-w-sm mx-auto md:max-w-none bg-muted/50 rounded-lg overflow-hidden shadow-2xl"
+            style={imageParallax.style}
+          >
             <Image
               src="/me/profile.png"
               alt="Phil Blecher"
@@ -19,8 +27,12 @@ export default function AboutMe() {
             />
           </div>
           
-          {/* Content */}
-          <div className="space-y-6 md:space-y-8 text-center md:text-left">
+          {/* Content with Parallax */}
+          <div 
+            ref={contentParallax.ref as React.RefObject<HTMLDivElement>}
+            className="space-y-6 md:space-y-8 text-center md:text-left"
+            style={contentParallax.style}
+          >
             <div className="inline-block">
               <span className="text-sm font-mono text-foreground">
                 About

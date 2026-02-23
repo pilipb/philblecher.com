@@ -7,10 +7,12 @@ import SourbrosApp from "./projects/SourbrosApp";
 import TwoSides from "./projects/TwoSides";
 import OneShot from "./projects/OneShot";
 import AboutMe from "./projects/AboutMe";
+import { useParallax } from "./hooks/useParallax";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState(0);
   const [showHeader, setShowHeader] = useState(false);
+  const heroParallax = useParallax({ speed: -0.15 });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -78,7 +80,11 @@ export default function Home() {
 
       {/* Hero Section - Page 1 */}
       <section className="scroll-section flex items-center justify-center bg-gradient-to-b from-background to-muted/20">
-        <div className="text-center space-y-6 px-4">
+        <div 
+          ref={heroParallax.ref as React.RefObject<HTMLDivElement>}
+          className="text-center space-y-6 px-4"
+          style={heroParallax.style}
+        >
           <h1 className="text-6xl md:text-8xl font-bold tracking-tight animate-fade-in">
             Phil Blecher
           </h1>

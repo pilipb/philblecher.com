@@ -1,9 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import { projects } from "./data";
 import FlippableCard from "./FlippableCard";
+import { useParallax } from "../hooks/useParallax";
 
 export default function TwoSides() {
   const project = projects.find(p => p.id === 2)!;
+  const backgroundParallax = useParallax({ speed: 0.3 });
+  const contentParallax = useParallax({ speed: -0.1 });
   
   const frontContent = (
     <div className="space-y-6 text-center md:text-left bg-background/95 rounded-lg p-8 backdrop-blur-sm shadow-2xl">
@@ -98,17 +103,26 @@ export default function TwoSides() {
   );
   
   return (
-    <section
-      className="scroll-section flex items-center justify-end relative overflow-hidden"
-      style={{
-        backgroundImage: "url('/twosides/screenshot.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
-      <div className="container mx-auto px-4 flex justify-end">
-        <div className="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-end pr-12">
+    <section className="scroll-section flex items-center justify-end relative overflow-auto">
+      {/* Parallax Background */}
+      <div
+        ref={backgroundParallax.ref as React.RefObject<HTMLDivElement>}
+        className="absolute inset-0 w-full h-[120%]"
+        style={{
+          ...backgroundParallax.style,
+          backgroundImage: "url('/twosides/screenshot.png')",
+          backgroundSize: "contain",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      />
+      
+      <div className="container mx-auto px-4 flex justify-end relative z-10">
+        <div 
+          ref={contentParallax.ref as React.RefObject<HTMLDivElement>}
+          className="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-end pr-12"
+          style={contentParallax.style}
+        >
           <div></div>
           {/* Project Info with Flippable Card */}
           <FlippableCard front={frontContent} back={backContent} />

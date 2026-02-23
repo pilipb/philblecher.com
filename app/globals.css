@@ -196,4 +196,10 @@
   .animate-slide-up {
     animation: slide-up 0.8s ease-out both;
   }
+  
+  /* Parallax performance optimizations */
+  [style*="translateY"] {
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
 }
