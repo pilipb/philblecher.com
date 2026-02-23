@@ -1,11 +1,11 @@
 "use client";
 
-import { ReactNode, isValidElement, Children } from "react";
+import { ReactNode, isValidElement, ElementType } from "react";
 
 interface BouncingTextProps {
   children: ReactNode;
   className?: string;
-  as?: keyof JSX.IntrinsicElements;
+  as?: ElementType;
 }
 
 function extractText(node: ReactNode): string {
@@ -13,8 +13,9 @@ function extractText(node: ReactNode): string {
     return String(node);
   }
   if (isValidElement(node)) {
-    if (node.props.children) {
-      return extractText(node.props.children);
+    const props = node.props as { children?: ReactNode };
+    if (props.children) {
+      return extractText(props.children);
     }
   }
   if (Array.isArray(node)) {
