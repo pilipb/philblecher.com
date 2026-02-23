@@ -122,7 +122,7 @@ export default function SourbrosApp() {
       className="scroll-section flex items-center justify-end relative overflow-hidden"
       style={{
         backgroundImage: "url('/sourbros/background.png')",
-        backgroundSize: "contain",
+        backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}

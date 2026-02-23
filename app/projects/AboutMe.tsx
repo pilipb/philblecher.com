@@ -22,20 +22,20 @@ export default function AboutMe() {
           {/* Content */}
           <div className="space-y-8 text-center md:text-left">
             <div className="inline-block">
-              <span className="text-sm font-mono text-muted-foreground">
+              <span className="text-sm font-mono text-foreground">
                 About
               </span>
             </div>
             <h2 className="text-5xl md:text-7xl font-bold tracking-tight">
               Phil Blecher
             </h2>
-            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+            <p className="text-xl md:text-2xl text-foreground leading-relaxed">
               Product and Developer passionate about building meaningful digital experiences.
             </p>
             <div className="pt-4">
               <div className="w-24 h-1 bg-foreground"></div>
             </div>
-            <div className="space-y-4 text-lg text-muted-foreground pt-8">
+            <div className="space-y-4 text-lg text-foreground pt-8">
               <p>
                 I'm a product builder and developer who loves creating things that matter. 
                 I work at the intersection of design, technology, and user experience, 
