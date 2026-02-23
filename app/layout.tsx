@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist_Mono } from "next/font/google";
 import "./globals.css";
+import ChatBubble from "./components/ChatBubble"; // Import here
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -25,10 +26,9 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body
-        className={`${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistMono.variable} antialiased`}>
         {children}
+        <ChatBubble /> {/* Add it here */}
       </body>
     </html>
   );

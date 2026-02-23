@@ -18,14 +18,14 @@ export default function ProjectThree() {
         </span>
       </div>
       <h2 className="text-5xl md:text-7xl font-bold tracking-tight">
-        <BouncingText>{project.title}</BouncingText>
+        {project.title}
       </h2>
       <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-        <BouncingText>{project.description}</BouncingText>
+        {project.description}
       </p>
       {project.nb && (
         <p className="text-sm text-muted-foreground">
-          <BouncingText>{project.nb}</BouncingText>
+          {project.nb}
         </p>
       )}
       <div className="pt-4">
@@ -44,7 +44,7 @@ export default function ProjectThree() {
       <div className="space-y-4 text-lg text-muted-foreground">
         {project.backcontent && (
           <p className="pt-2">
-            <BouncingText>{project.backcontent}</BouncingText>
+            {project.backcontent}
           </p>
         )}
         {project.website && (
@@ -56,7 +56,7 @@ export default function ProjectThree() {
               className="text-foreground hover:underline"
               onClick={(e) => e.stopPropagation()}
             >
-              <BouncingText>Visit {project.website.replace(/^https?:\/\//, '')} →</BouncingText>
+              Visit {project.website.replace(/^https?:\/\//, '')} →
             </a>
           </p>
         )}

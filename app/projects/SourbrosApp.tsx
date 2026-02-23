@@ -30,8 +30,8 @@ export default function SourbrosApp() {
               className="hover:underline focus:underline"
               onClick={(e) => e.stopPropagation()}
             >
-              <h2 className="text-5xl md:text-7xl font-bold tracking-tight">
-                <BouncingText>{project.title}</BouncingText>
+              <h2 className="text-4xl md:text-7xl font-bold tracking-tight">
+                {project.title}
               </h2>
             </a>
             <div className="flex justify-center md:justify-start mt-4 md:mt-0">
@@ -46,7 +46,7 @@ export default function SourbrosApp() {
         ) : (
           <>
             <h2 className="text-5xl md:text-7xl font-bold tracking-tight">
-              <BouncingText>{project.title}</BouncingText>
+              {project.title}
             </h2>
             <div className="flex justify-center md:justify-start mt-4 md:mt-0">
               <a
@@ -68,7 +68,7 @@ export default function SourbrosApp() {
         )}
       </div>
       <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-        <BouncingText>{project.description}</BouncingText>
+        {project.description}
       </p>
       <div className="pt-4">
         <div className="w-24 h-1 bg-foreground"></div>
@@ -86,7 +86,7 @@ export default function SourbrosApp() {
       <div className="space-y-4 text-lg text-muted-foreground">
         {project.backcontent && (
           <p className="pt-2">
-            <BouncingText>{project.backcontent}</BouncingText>
+            {project.backcontent}
           </p>
         )}
         {project.website && (
@@ -98,7 +98,8 @@ export default function SourbrosApp() {
               className="text-foreground hover:underline"
               onClick={(e) => e.stopPropagation()}
             >
-              <BouncingText>Visit {project.website.replace(/^https?:\/\//, '')} →</BouncingText>
+              Visit {project.website.replace(/^https?:\/\//, '')} →
+
             </a>
             <br />
             <a
@@ -108,7 +109,7 @@ export default function SourbrosApp() {
               className="text-foreground hover:underline"
               onClick={(e) => e.stopPropagation()}
             >
-              <BouncingText>Instagram →</BouncingText>
+              Instagram →
             </a>
           </p>
         )}

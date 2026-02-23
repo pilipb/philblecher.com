@@ -11,7 +11,7 @@ export default function AboutMe() {
   
   return (
     <section className="scroll-section flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-pink-500/20 to-rose-500/20">
-      <div className="container mx-auto px-4 py-8 md:py-0">
+      <div className="container mx-auto px-4 sm:px-6 py-8 md:py-0">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Profile Image with Parallax */}
           <div 
@@ -31,7 +31,7 @@ export default function AboutMe() {
           {/* Content with Parallax */}
           <div 
             ref={contentParallax.ref as React.RefObject<HTMLDivElement>}
-            className="space-y-6 md:space-y-8 text-center md:text-left"
+            className="space-y-4 sm:space-y-6 md:space-y-8 text-center md:text-left"
             style={contentParallax.style}
           >
             <div className="inline-block">
@@ -39,29 +39,21 @@ export default function AboutMe() {
                 <BouncingText>About</BouncingText>
               </span>
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight break-words">
               <BouncingText>Phil Blecher</BouncingText>
             </h2>
-            <p className="text-lg md:text-xl lg:text-2xl text-foreground leading-relaxed">
-              <BouncingText>Product and Developer passionate about building meaningful digital experiences.</BouncingText>
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-foreground leading-relaxed break-words px-2 sm:px-0">
+              Product Engineer / Software Developer (depends who asks). I'm excited by creating fun interfaces for consumer apps, and complex agentic applications.
             </p>
             <div className="pt-2 md:pt-4">
               <div className="w-24 h-1 bg-foreground mx-auto md:mx-0"></div>
             </div>
-            <div className="space-y-3 md:space-y-4 text-base md:text-lg text-foreground pt-4 md:pt-8">
+            <div className="space-y-3 md:space-y-4 text-sm sm:text-base md:text-lg text-foreground pt-4 md:pt-8 break-words px-2 sm:px-0">
               <p>
-                <BouncingText>
-                  I'm a product builder and developer who loves creating things that matter. 
-                  I work at the intersection of design, technology, and user experience, 
-                  bringing ideas to life through thoughtful development and product thinking.
-                </BouncingText>
+                  I started as a design engineer and quickly pivoted to the dark side: software engineering. Over the past couple of years I've worked moslty on consumer apps, first as a backend engineer, then as a full stack developer working across react, next.js, and flutter and now react native.
               </p>
               <p>
-                <BouncingText>
-                  Whether it's building community-driven apps, exploring AI-powered tools, 
-                  or crafting digital experiences, I'm driven by curiosity and the desire 
-                  to solve real problems.
-                </BouncingText>
+                  This portfolio is a collection of my proudest moments - the projects that I have had full ownership of the design and development. All of the projects above cross the full stack and make use of agentic workflows for complicated reasoning tasks (apart from sourbros which is a social app).
               </p>
             </div>
             <div className="pt-6 flex flex-wrap gap-4 justify-center md:justify-start">

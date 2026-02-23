@@ -133,6 +133,9 @@
     overflow-x: hidden;
     font-family: 'Bricolage Grotesque', sans-serif;
     font-variation-settings: 'wdth' 75;
+    hyphens: auto;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
   
   #__next {

@@ -84,7 +84,7 @@ export default function Home() {
       </header>
 
       {/* Hero Section - Page 1 */}
-      <section className="scroll-section flex items-center justify-center bg-gradient-to-b from-background to-muted/20">
+      <section className="scroll-section flex items-center justify-center bg-gradient-to-br from-pink-500/20 to-rose-500/20">
         <div 
           ref={heroParallax.ref as React.RefObject<HTMLDivElement>}
           className="text-center space-y-6 px-4"
@@ -95,6 +95,9 @@ export default function Home() {
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground animate-fade-in-delay">
             <BouncingText>Product and Developer</BouncingText>
+          </p>
+          <p className="text-xl md:text-2xl text-muted-foreground animate-fade-in-delay">
+            Started as a design engineer, became a full stack developer, now working on fun web or mobile apps.
           </p>
           <div className="pt-8 animate-fade-in-delay-2">
             <div className="w-12 h-1 bg-foreground mx-auto"></div>

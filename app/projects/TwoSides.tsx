@@ -30,7 +30,7 @@ export default function TwoSides() {
               onClick={(e) => e.stopPropagation()}
             >
               <h2 className="text-5xl md:text-7xl font-bold tracking-tight">
-                <BouncingText>{project.title}</BouncingText>
+                {project.title}
               </h2>
             </a>
             <div className="flex justify-center md:justify-start mt-4 md:mt-0">
@@ -44,8 +44,8 @@ export default function TwoSides() {
           </>
         ) : (
           <>
-            <h2 className="text-5xl md:text-7xl font-bold tracking-tight">
-              <BouncingText>{project.title}</BouncingText>
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
+              {project.title}
             </h2>
             <div className="flex justify-center md:justify-start mt-4 md:mt-0">
               <a
@@ -67,11 +67,11 @@ export default function TwoSides() {
         )}
       </div>
       <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-        <BouncingText>{project.description}</BouncingText>
+        {project.description}
       </p>
       {project.nb && (
         <p className="text-sm text-muted-foreground">
-          <BouncingText>{project.nb}</BouncingText>
+          {project.nb}
         </p>
       )}
       <div className="pt-4">
@@ -90,7 +90,7 @@ export default function TwoSides() {
       <div className="space-y-4 text-lg text-muted-foreground">
         {project.backcontent && (
           <p className="pt-2">
-            <BouncingText>{project.backcontent}</BouncingText>
+            {project.backcontent}
           </p>
         )}
       </div>
@@ -104,7 +104,7 @@ export default function TwoSides() {
   );
   
   return (
-    <section className="scroll-section flex items-center justify-end relative overflow-auto">
+    <section className="scroll-section flex items-center justify-end relative overflow-hidden">
       {/* Parallax Background */}
       <div
         ref={backgroundParallax.ref as React.RefObject<HTMLDivElement>}

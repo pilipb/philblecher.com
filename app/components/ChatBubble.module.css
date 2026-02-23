@@ -1,0 +1,57 @@
+.bubbleWrapper {
+    position: fixed;
+    right: -250px; /* Start off-screen */
+    z-index: 100;
+    text-decoration: none;
+    /* Animation: Slide in, then start floating */
+    animation: slideIn 0.8s forwards ease-out 1s, 
+               float 3s infinite ease-in-out 1.8s;
+  }
+
+  .bubbleWrapper.coverPage {
+    top: 20%;
+    transform: translateY(-50%);
+  }
+
+  .bubbleWrapper.lastPage {
+    top: 80%;
+    transform: translateY(-50%);
+  }
+  
+  .bubble {
+    position: relative;
+    background: #000; /* Or your brand color */
+    color: #fff;
+    padding: 32px 48px;
+    border-radius: 48px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 600;
+    font-size: 1.5em;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  .bubble:hover {
+    transform: scale(1.05);
+  }
+  
+  .tail {
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 12px solid #000;
+  }
+  
+  @keyframes slideIn {
+    to { right: 50px; }
+  }
+  
+  @keyframes float {
+    0%, 100% { margin-top: 0; }
+    50% { margin-top: -10px; }
+  }
