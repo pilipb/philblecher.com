@@ -102,7 +102,7 @@ export default function TwoSides() {
       className="scroll-section flex items-center justify-end relative overflow-hidden"
       style={{
         backgroundImage: "url('/twosides/screenshot.png')",
-        backgroundSize: "contain",
+        backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}

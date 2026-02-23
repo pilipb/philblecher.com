@@ -26,6 +26,7 @@ export const projects: Project[] = [
     image: "/globe.svg",
     description: "The lovable for AI filmmaking - an agentic film editor.",
     backcontent: "Oneshot was an agentic film editor that aimed to reduce the barrier to entry for AI filmmaking. The platform used multi-agent collaboration to tackle the complex tasks of film creation and editing.",
+    nb: "Still in closed beta.",
     color: "from-orange-500/20 to-red-500/20",
   },
   {

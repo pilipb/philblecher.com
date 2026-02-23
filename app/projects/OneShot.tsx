@@ -19,6 +19,11 @@ export default function ProjectThree() {
       <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
         {project.description}
       </p>
+      {project.nb && (
+        <p className="text-sm text-muted-foreground">
+          {project.nb}
+        </p>
+      )}
       <div className="pt-4">
         <div className="w-24 h-1 bg-foreground"></div>
       </div>
@@ -69,7 +74,7 @@ export default function ProjectThree() {
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-contain z-0"
+        className="absolute inset-0 w-full h-full object-cover z-0"
       >
         <source src="/oneshot/demo.mov" type="video/quicktime" />
         <source src="/oneshot/demo.mov" type="video/mp4" />
