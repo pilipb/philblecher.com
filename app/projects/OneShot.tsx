@@ -76,7 +76,7 @@ export default function ProjectThree() {
       <div
         ref={videoParallax.ref as React.RefObject<HTMLDivElement>}
         className="absolute inset-0 w-full h-[120%]"
-        style={videoParallax.style}
+        style={videoParallax.style as React.CSSProperties}
       >
         <div className="absolute inset-0 w-full h-full md:w-full md:h-full">
           <div className="absolute top-[10%] left-1/2 -translate-x-1/2 w-screen aspect-square md:w-full md:h-full md:aspect-auto md:top-0 md:left-0 md:translate-x-0 md:translate-y-0">
@@ -102,7 +102,7 @@ export default function ProjectThree() {
         <div 
           ref={contentParallax.ref as React.RefObject<HTMLDivElement>}
           className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center"
-          style={contentParallax.style}
+          style={contentParallax.style as React.CSSProperties}
         >
           <div></div>
           {/* Project Info with Flippable Card - Hidden on mobile */}

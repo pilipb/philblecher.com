@@ -110,7 +110,7 @@ export default function TwoSides() {
         ref={backgroundParallax.ref as React.RefObject<HTMLDivElement>}
         className="absolute inset-0 w-full h-[120%]"
         style={{
-          ...backgroundParallax.style,
+          ...backgroundParallax.style as React.CSSProperties,
           backgroundImage: "url('/twosides/screenshot.png')",
           backgroundSize: typeof window !== "undefined" && window.innerWidth < 768 ? "contain" : "cover",
           backgroundPosition: "end",
@@ -122,7 +122,7 @@ export default function TwoSides() {
         <div 
           ref={contentParallax.ref as React.RefObject<HTMLDivElement>}
           className="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-end pr-12"
-          style={contentParallax.style}
+          style={contentParallax.style as React.CSSProperties}
         >
           <div></div>
           <div className="hidden md:block">

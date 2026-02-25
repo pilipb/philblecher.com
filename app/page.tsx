@@ -93,7 +93,7 @@ export default function Home() {
         <div 
           ref={heroParallax.ref as React.RefObject<HTMLDivElement>}
           className="text-center space-y-6 px-4 relative z-10"
-          style={heroParallax.style}
+          style={heroParallax.style as React.CSSProperties}
         >
           <h1 className="text-6xl md:text-8xl font-bold tracking-tight animate-fade-in">
             <BouncingText>Phil Blecher</BouncingText>

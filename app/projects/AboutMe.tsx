@@ -17,7 +17,7 @@ export default function AboutMe() {
           <div 
             ref={imageParallax.ref as React.RefObject<HTMLDivElement>}
             className="relative aspect-square w-full max-w-sm mx-auto md:max-w-none bg-muted/50 rounded-lg overflow-hidden shadow-2xl"
-            style={imageParallax.style}
+            style={imageParallax.style as React.CSSProperties}
           >
             <Image
               src="/me/profile.png"
@@ -32,7 +32,7 @@ export default function AboutMe() {
           <div 
             ref={contentParallax.ref as React.RefObject<HTMLDivElement>}
             className="space-y-2 sm:space-y-4 md:space-y-8 text-center md:text-left"
-            style={contentParallax.style}
+            style={contentParallax.style as React.CSSProperties}
           >
             <div className="inline-block">
               <span className="text-sm font-mono text-foreground">

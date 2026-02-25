@@ -130,7 +130,7 @@ export default function SourbrosApp() {
         ref={backgroundParallax.ref as React.RefObject<HTMLDivElement>}
         className="absolute inset-0 w-full h-[120%]"
         style={{
-          ...backgroundParallax.style,
+          ...backgroundParallax.style as React.CSSProperties,
           backgroundImage: "url('/sourbros/background.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -142,7 +142,7 @@ export default function SourbrosApp() {
         <div 
           ref={contentParallax.ref as React.RefObject<HTMLDivElement>}
           className="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-end pr-12"
-          style={contentParallax.style}
+          style={contentParallax.style as React.CSSProperties}
         >
           <div></div>
           {/* Project Info with Flippable Card */}
