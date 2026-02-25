@@ -146,7 +146,21 @@ export default function SourbrosApp() {
         >
           <div></div>
           {/* Project Info with Flippable Card */}
+          <div className="hidden md:block">
           <FlippableCard front={frontContent} back={backContent} />
+          </div>
+          <div className="md:hidden">
+            {/* just have the title in plain black text with white background centred in the middle of the screen*/}
+            <div className="flex flex-col items-center justify-center h-screen">
+              <div className="bg-white rounded-lg p-8 shadow-2xl">
+                <h2 className="text-4xl md:text-7xl font-bold tracking-tight">
+                  {project.title}
+                </h2>
+                <div className="w-24 h-1 bg-foreground"></div>
+                <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">{project.description}</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

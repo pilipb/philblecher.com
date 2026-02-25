@@ -71,23 +71,27 @@ export default function ProjectThree() {
   );
   
   return (
-    <section className="scroll-section flex items-center justify-center relative overflow-hidden">
+    <section className="scroll-section flex items-center justify-center relative overflow-hidden bg-black">
       {/* Parallax Video Background */}
       <div
         ref={videoParallax.ref as React.RefObject<HTMLDivElement>}
         className="absolute inset-0 w-full h-[120%]"
         style={videoParallax.style}
       >
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src="/oneshot/demo.mp4" type="video/mp4" />
-          <source src="/oneshot/demo.mov" type="video/quicktime" />
-        </video>
+        <div className="absolute inset-0 w-full h-full md:w-full md:h-full">
+          <div className="absolute top-[10%] left-1/2 -translate-x-1/2 w-screen aspect-square md:w-full md:h-full md:aspect-auto md:top-0 md:left-0 md:translate-x-0 md:translate-y-0">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover md:object-contain"
+            >
+              <source src="/oneshot/demo.mp4" type="video/mp4" />
+              <source src="/oneshot/demo.mov" type="video/quicktime" />
+            </video>
+          </div>
+        </div>
       </div>
       
       {/* Overlay for better text readability */}
@@ -101,8 +105,22 @@ export default function ProjectThree() {
           style={contentParallax.style}
         >
           <div></div>
-          {/* Project Info with Flippable Card */}
-          <FlippableCard front={frontContent} back={backContent} />
+          {/* Project Info with Flippable Card - Hidden on mobile */}
+          <div className="hidden md:block">
+            <FlippableCard front={frontContent} back={backContent} />
+          </div>
+          <div className="md:hidden">
+            {/* just have the title in plain black text with white background centred in the middle of the screen*/}
+            <div className="flex flex-col items-end justify-end pr-12 pb-24 h-screen">
+              <div className="bg-white rounded-lg p-8 shadow-2xl">
+                <h2 className="text-4xl md:text-7xl font-bold tracking-tight">
+                  {project.title}
+                </h2>
+                <div className="w-24 h-1 bg-foreground"></div>
+                <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">{project.description}</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

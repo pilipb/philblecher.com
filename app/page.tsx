@@ -9,6 +9,7 @@ import OneShot from "./projects/OneShot";
 import AboutMe from "./projects/AboutMe";
 import { useParallax } from "./hooks/useParallax";
 import BouncingText from "./components/BouncingText";
+import Clouds from "./components/Clouds";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState(0);
@@ -84,26 +85,30 @@ export default function Home() {
       </header>
 
       {/* Hero Section - Page 1 */}
-      <section className="scroll-section flex items-center justify-center bg-gradient-to-br from-pink-500/20 to-rose-500/20">
+      <section className="scroll-section flex items-center justify-center bg-gradient-to-br from-blue-500/40 to-blue-500/20 relative">
+        {/* Clouds layer */}
+        <Clouds />
+        
+        {/* Text content with parallax */}
         <div 
           ref={heroParallax.ref as React.RefObject<HTMLDivElement>}
-          className="text-center space-y-6 px-4"
+          className="text-center space-y-6 px-4 relative z-10"
           style={heroParallax.style}
         >
           <h1 className="text-6xl md:text-8xl font-bold tracking-tight animate-fade-in">
             <BouncingText>Phil Blecher</BouncingText>
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground animate-fade-in-delay">
+          <p className="text-xl md:text-2xl text-foreground animate-fade-in-delay">
             <BouncingText>Product and Developer</BouncingText>
           </p>
-          <p className="text-xl md:text-2xl text-muted-foreground animate-fade-in-delay">
+          <p className="text-xl md:text-2xl text-foreground animate-fade-in-delay">
             Started as a design engineer, became a full stack developer, now working on fun web or mobile apps.
           </p>
           <div className="pt-8 animate-fade-in-delay-2">
             <div className="w-12 h-1 bg-foreground mx-auto"></div>
           </div>
           <div className="pt-12 animate-fade-in-delay-2">
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-foreground">
               <BouncingText>Scroll to explore</BouncingText>
             </p>
             <div className="mt-4 animate-bounce">

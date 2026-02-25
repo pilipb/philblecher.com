@@ -9,13 +9,17 @@
   }
 
   .bubbleWrapper.coverPage {
-    top: 20%;
+    top: 85%;
     transform: translateY(-50%);
   }
 
   .bubbleWrapper.lastPage {
-    top: 80%;
+    top: 30%;
     transform: translateY(-50%);
+    right: auto;
+    left: -250px; /* Start off-screen on the left */
+    animation: slideInLeft 0.8s forwards ease-out 1s, 
+               float 3s infinite ease-in-out 1.8s;
   }
   
   .bubble {
@@ -46,9 +50,20 @@
     border-bottom: 10px solid transparent;
     border-left: 12px solid #000;
   }
+
+  .bubbleWrapper.lastPage .bubble .tail {
+    right: auto;
+    left: -8px;
+    border-left: none;
+    border-right: 12px solid #000;
+  }
   
   @keyframes slideIn {
     to { right: 50px; }
+  }
+
+  @keyframes slideInLeft {
+    to { left: 50px; }
   }
   
   @keyframes float {

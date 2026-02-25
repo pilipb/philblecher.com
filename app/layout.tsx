@@ -28,7 +28,7 @@ export default function RootLayout({
       </head>
       <body className={`${geistMono.variable} antialiased`}>
         {children}
-        <ChatBubble /> {/* Add it here */}
+        <ChatBubble />
       </body>
     </html>
   );
