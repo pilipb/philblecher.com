@@ -85,8 +85,8 @@ export default function ProjectThree() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         >
+          <source src="/oneshot/demo.mp4" type="video/mp4" />
           <source src="/oneshot/demo.mov" type="video/quicktime" />
-          <source src="/oneshot/demo.mov" type="video/mp4" />
         </video>
       </div>
       
